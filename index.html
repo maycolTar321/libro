@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Libro digital de lectura sobre barreras personales y contextuales para el desarrollo de la creatividad académica.">
+<title>Libro digital | Barreras para el desarrollo de la creatividad</title>
+<style>
+:root{--bg:#f3f5fb;--paper:#fff;--ink:#20283a;--muted:#68738a;--accent:#3157a4;--line:#dfe5ef;--mint:#e7f7f1;--gold:#fff4d8}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:radial-gradient(circle at 8% 8%,#e5ebff 0,transparent 28%),radial-gradient(circle at 95% 35%,#e2f6f0 0,transparent 24%),var(--bg);color:var(--ink);font:16px/1.75 system-ui,-apple-system,"Segoe UI",sans-serif;letter-spacing:.005em}
+header{background:linear-gradient(130deg,#18294d,#3157a4 65%,#4977c7);color:#fff;padding:clamp(34px,6vw,70px) 20px 48px;position:relative;overflow:hidden}header:after{content:"✦";position:absolute;right:8%;top:10%;font-size:clamp(5rem,16vw,12rem);opacity:.09;animation:float 7s ease-in-out infinite}
+.head{max-width:1100px;margin:auto}header .tag{font-size:.78rem;text-transform:uppercase;letter-spacing:.13em;opacity:.8}h1{line-height:1.2;font-size:clamp(1.7rem,4vw,2.8rem);margin:.5rem 0}header p{max-width:760px;color:#e4eaff;margin:.5rem 0}
+.toolbar{position:sticky;top:0;z-index:5;background:#fff;border-bottom:1px solid var(--line);padding:10px 14px;box-shadow:0 3px 12px #17284a0d}
+.tools{max-width:1100px;margin:auto;display:flex;gap:8px;align-items:center;flex-wrap:wrap}button,input{font:inherit}button{border:1px solid var(--line);background:#fff;color:var(--ink);padding:9px 13px;border-radius:10px;cursor:pointer}button:hover{border-color:var(--accent);color:var(--accent)}button.primary{background:var(--accent);color:white;border-color:var(--accent)}input[type=search]{flex:1;min-width:150px;padding:10px 12px;border:1px solid var(--line);border-radius:10px}
+main{max-width:1100px;margin:26px auto;padding:0 16px 60px}.intro,.translation,.helpers{background:rgba(255,255,255,.94);border:1px solid var(--line);border-radius:20px;padding:clamp(20px,3.5vw,34px);margin-bottom:24px;box-shadow:0 14px 38px #17284a0d;animation:rise .65s both}.intro{border-top:4px solid #6a8ce0}.translation{border-top:4px solid #67bda2}.helpers{border-top:4px solid #edc66b}.intro h2,.translation h2,.helpers h2{letter-spacing:-.025em}.intro p{max-width:78ch}.intro h2,.translation h2{margin-top:0}.note{color:var(--muted);font-size:.93rem}
+.translation details,.helpers details{border:1px solid var(--line);border-radius:13px;padding:13px 16px;margin:10px 0;background:#fbfcff;transition:background .2s,transform .2s}.translation details[open],.helpers details[open]{background:#f5f8ff}.translation summary,.helpers summary{cursor:pointer;font-weight:700;color:var(--accent);padding:2px}.translation summary:hover,.helpers summary:hover{color:#203e83}.translation details p,.helpers details p{margin:.65rem 0 0}.helpers-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,260px),1fr));gap:12px}.helpers details{margin:0;height:fit-content}.term{display:inline-block;background:#e9efff;color:#24478f;padding:1px 7px;border-radius:6px;font-weight:650}.translation h3{margin-bottom:.3rem}.translation p{margin-top:.35rem}
+.pages{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,420px),1fr));gap:22px}.page{background:white;border:1px solid var(--line);border-radius:16px;padding:12px;box-shadow:0 10px 30px #17284a10;scroll-margin-top:90px;transition:transform .25s,box-shadow .25s;animation:rise .6s both}.page:hover{transform:translateY(-4px);box-shadow:0 18px 42px #17284a17}.page img{transition:filter .25s}.page img:hover{filter:contrast(1.025)}.page-head{display:flex;justify-content:space-between;align-items:center;padding:4px 4px 10px;color:var(--muted);font-size:.9rem}.page img{display:block;width:100%;height:auto;border-radius:5px;border:1px solid #edf0f5}.page.hidden{display:none}footer{text-align:center;color:var(--muted);padding:25px;font-size:.9rem}
+@keyframes rise{from{opacity:0;transform:translateY(16px)}to{opacity:1;transform:translateY(0)}}@keyframes float{0%,100%{transform:translateY(0) rotate(0)}50%{transform:translateY(12px) rotate(8deg)}}@media(prefers-reduced-motion:reduce){*,*:before,*:after{animation:none!important;transition:none!important;scroll-behavior:auto!important}}@media(max-width:600px){header{padding:30px 16px}.toolbar{position:sticky}.pages{grid-template-columns:1fr}.page{padding:7px}.tools button{flex:1}.intro,.translation,.helpers{border-radius:15px}}
+@media print{header,.toolbar,.intro,.translation,footer{display:none!important}body{background:#fff}.pages{display:block}.page{break-after:page;border:0;box-shadow:none;padding:0;margin:0}.page-head{display:none}.page img{border:0;border-radius:0;width:100%;max-height:95vh;object-fit:contain}}
+</style>
+</head>
+<body>
+<header><div class="head"><div class="tag">Biblioteca digital · Lectura académica</div>
+<h1>Barreras personales y contextuales para el desarrollo de la creatividad</h1>
+<p>Libro digital de consulta basado en el artículo de Naroa Pérez-Sistiaga y Leire Aperribai, publicado en <em>Talíncrea</em> (2022).</p></div></header>
+<div class="toolbar"><div class="tools">
+<button id="prev">← Página anterior</button><button id="next" class="primary">Página siguiente →</button>
+<input id="buscar" type="search" placeholder="Buscar página (ej. 8)…" aria-label="Buscar página">
+<button onclick="window.print()">Imprimir / Guardar PDF</button>
+<button id="arriba">Ir al inicio ↑</button>
+<span id="contador" class="note">Página 1 de 17</span>
+</div></div>
+<main>
+<section class="intro">
+<h2>Cómo usar este libro</h2>
+<p>Desplázate por las páginas, usa los botones para avanzar o retroceder y aprovecha el buscador para ir a una página concreta. En móvil, las páginas se adaptan al ancho de la pantalla. Las páginas del artículo se mantienen tal como aparecen en el documento original para conservar tablas, gráficos, citas y formato.</p>
+<p class="note"><strong>Nota sobre el idioma:</strong> el artículo original está mayoritariamente en español. La traducción de las partes redactadas en inglés se incluye aquí como apoyo de lectura; las páginas originales se conservan sin alterar su diseño.</p>
+</section>
+<section class="translation" id="traduccion">
+<h2>Traducción al español de los textos en inglés</h2>
+<details open><summary>Título en inglés — traducción</summary>
+<p><strong>Barreras personales y contextuales para el desarrollo de la creatividad en el ámbito académico percibidas por los estudiantes de la Universidad del País Vasco UPV/EHU.</strong></p></details>
+<details open><summary>Resumen en inglés — traducción</summary>
+<p>En un mundo en constante cambio, es esencial que las personas cuenten con recursos para adaptarse, y para ello se necesita creatividad. Este estudio piloto, con un diseño de métodos mixtos, busca explorar qué barreras personales y contextuales perciben los estudiantes de la Universidad del País Vasco (UPV/EHU) para desarrollar la creatividad en el ámbito académico. Una muestra de 33 estudiantes de distintas carreras de la UPV/EHU respondió dos cuestionarios y dos preguntas abiertas. Se estudiaron variables personales (sociodemográficas y de salud) y contextuales (percepción del profesorado, barreras percibidas y propuestas para desarrollar la creatividad en la universidad). Los resultados muestran que las principales barreras son la falta de tiempo y la escasa presencia de la creatividad en el aula, lo que evidencia la necesidad de innovar en este ámbito. Las propuestas de los participantes incluyen actividades que requieran utilizar la creatividad y variar las formas de impartir las clases.</p>
+</details>
+<details><summary>Palabras clave en inglés — traducción</summary><p>Creatividad, barreras, propuestas, estudiantes universitarios.</p></details>
+<details><summary>Algunos títulos de referencias en inglés — traducción orientativa</summary>
+<ul>
+<li><em>Creative giftedness and educational opportunities:</em> Talento creativo y oportunidades educativas.</li>
+<li><em>Designing and Conducting Mixed Methods Research:</em> Diseño y realización de investigaciones con métodos mixtos.</li>
+<li><em>Communities of practice a research paradigm for the mixed methods approach:</em> Comunidades de práctica: un paradigma de investigación para el enfoque de métodos mixtos.</li>
+<li><em>Health and Creativity: Evidence from Corporate Innovation:</em> Salud y creatividad: evidencias de la innovación empresarial.</li>
+<li><em>Creativity, emotional intelligence and coping style in intellectually gifted adults:</em> Creatividad, inteligencia emocional y estilo de afrontamiento en adultos con altas capacidades intelectuales.</li>
+<li><em>The creativity in teaching as a factor of approach of the university to social challenges:</em> La creatividad en la enseñanza como factor de acercamiento de la universidad a los desafíos sociales.</li>
+<li><em>Relationships between intelligence and creativity in gifted and nongifted children:</em> Relaciones entre inteligencia y creatividad en niños con y sin altas capacidades.</li>
+<li><em>Exploring children’s social and emotional representations of the Covid-19 pandemic:</em> Exploración de las representaciones sociales y emocionales de la pandemia de COVID-19 en niños.</li>
+<li><em>Mixed methods research: A research paradigm whose time has come:</em> Investigación con métodos mixtos: un paradigma de investigación cuyo momento ha llegado.</li>
+<li><em>Perceptions of Barriers to Personal Creativity: Validation of an Inventory Involving High Education Students:</em> Percepciones de las barreras para la creatividad personal: validación de un inventario aplicado a estudiantes de educación superior.</li>
+<li><em>What is a Creative Teacher and What is a Creative Pupil? Perceptions of Teachers:</em> ¿Qué es un docente creativo y qué es un estudiante creativo? Percepciones del profesorado.</li>
+<li><em>Convergent Thinking Moderates the Relationship between Divergent Thinking and Scientific Creativity:</em> El pensamiento convergente modera la relación entre el pensamiento divergente y la creatividad científica.</li>
+</ul>
+<p class="note">Las traducciones de títulos bibliográficos son orientativas y se añaden para facilitar la comprensión; las referencias originales se conservan en las páginas del artículo.</p>
+</details>
+</section>
+<section class="helpers" id="ayudas"><h2>🧭 Guía rápida: palabras y conceptos</h2><p>Abre cada tarjeta cuando encuentres una palabra difícil. Las explicaciones son ayudas de lectura y no reemplazan las definiciones completas del artículo.</p><div class="helpers-grid">
+<details><summary>Creatividad</summary><p>Capacidad de producir ideas novedosas, originales y útiles para responder a una necesidad o resolver un problema.</p></details>
+<details><summary>Barreras personales</summary><p>Factores relacionados con la propia persona que pueden dificultar la generación de ideas, como la inseguridad, el cansancio o la falta de confianza.</p></details>
+<details><summary>Barreras contextuales</summary><p>Obstáculos del entorno, por ejemplo, poco tiempo, tareas muy rígidas o clases que ofrecen pocas oportunidades para proponer ideas.</p></details>
+<details><summary>Pensamiento divergente</summary><p>Forma de pensar que busca varias respuestas o alternativas posibles ante una pregunta o problema.</p></details>
+<details><summary>Pensamiento convergente</summary><p>Proceso de comparar opciones, aplicar criterios y elegir una respuesta adecuada o bien fundamentada.</p></details>
+<details><summary>Autoconcepto</summary><p>La idea o imagen que una persona tiene de sí misma, de sus capacidades y de sus características.</p></details>
+<details><summary>Método mixto</summary><p>Diseño de investigación que combina datos cuantitativos —como cifras y porcentajes— con información cualitativa, como respuestas abiertas.</p></details>
+<details><summary>Muestra y estudio piloto</summary><p>La muestra es el grupo que participa en una investigación. Un estudio piloto es una primera exploración que ayuda a conocer el tema y preparar estudios posteriores.</p></details>
+<details><summary>Chi-cuadrado (χ²)</summary><p>Prueba estadística utilizada para examinar si existe asociación entre variables categóricas. El artículo la emplea al analizar grupos de respuestas.</p></details>
+<details><summary>Referencias bibliográficas</summary><p>Lista de trabajos y fuentes citados por las autoras. Abre la sección de traducciones para consultar el significado orientativo de algunos títulos en inglés; los datos originales se conservan.</p></details>
+</div><p class="note">Consejo: usa el buscador de páginas para ubicar rápidamente una parte del artículo y vuelve a estas tarjetas cuando necesites aclarar un término.</p></section>
+<section class="pages" id="pages">
+<article class="page" id="pagina-1" data-page="1"><div class="page-head"><span>Artículo original</span><strong>Página 1 de 17</strong></div><img loading="lazy" src="paginas/pagina-01.jpg" alt="Página 1 del artículo académico"></article>
+<article class="page" id="pagina-2" data-page="2"><div class="page-head"><span>Artículo original</span><strong>Página 2 de 17</strong></div><img loading="lazy" src="paginas/pagina-02.jpg" alt="Página 2 del artículo académico"></article>
+<article class="page" id="pagina-3" data-page="3"><div class="page-head"><span>Artículo original</span><strong>Página 3 de 17</strong></div><img loading="lazy" src="paginas/pagina-03.jpg" alt="Página 3 del artículo académico"></article>
+<article class="page" id="pagina-4" data-page="4"><div class="page-head"><span>Artículo original</span><strong>Página 4 de 17</strong></div><img loading="lazy" src="paginas/pagina-04.jpg" alt="Página 4 del artículo académico"></article>
+<article class="page" id="pagina-5" data-page="5"><div class="page-head"><span>Artículo original</span><strong>Página 5 de 17</strong></div><img loading="lazy" src="paginas/pagina-05.jpg" alt="Página 5 del artículo académico"></article>
+<article class="page" id="pagina-6" data-page="6"><div class="page-head"><span>Artículo original</span><strong>Página 6 de 17</strong></div><img loading="lazy" src="paginas/pagina-06.jpg" alt="Página 6 del artículo académico"></article>
+<article class="page" id="pagina-7" data-page="7"><div class="page-head"><span>Artículo original</span><strong>Página 7 de 17</strong></div><img loading="lazy" src="paginas/pagina-07.jpg" alt="Página 7 del artículo académico"></article>
+<article class="page" id="pagina-8" data-page="8"><div class="page-head"><span>Artículo original</span><strong>Página 8 de 17</strong></div><img loading="lazy" src="paginas/pagina-08.jpg" alt="Página 8 del artículo académico"></article>
+<article class="page" id="pagina-9" data-page="9"><div class="page-head"><span>Artículo original</span><strong>Página 9 de 17</strong></div><img loading="lazy" src="paginas/pagina-09.jpg" alt="Página 9 del artículo académico"></article>
+<article class="page" id="pagina-10" data-page="10"><div class="page-head"><span>Artículo original</span><strong>Página 10 de 17</strong></div><img loading="lazy" src="paginas/pagina-10.jpg" alt="Página 10 del artículo académico"></article>
+<article class="page" id="pagina-11" data-page="11"><div class="page-head"><span>Artículo original</span><strong>Página 11 de 17</strong></div><img loading="lazy" src="paginas/pagina-11.jpg" alt="Página 11 del artículo académico"></article>
+<article class="page" id="pagina-12" data-page="12"><div class="page-head"><span>Artículo original</span><strong>Página 12 de 17</strong></div><img loading="lazy" src="paginas/pagina-12.jpg" alt="Página 12 del artículo académico"></article>
+<article class="page" id="pagina-13" data-page="13"><div class="page-head"><span>Artículo original</span><strong>Página 13 de 17</strong></div><img loading="lazy" src="paginas/pagina-13.jpg" alt="Página 13 del artículo académico"></article>
+<article class="page" id="pagina-14" data-page="14"><div class="page-head"><span>Artículo original</span><strong>Página 14 de 17</strong></div><img loading="lazy" src="paginas/pagina-14.jpg" alt="Página 14 del artículo académico"></article>
+<article class="page" id="pagina-15" data-page="15"><div class="page-head"><span>Artículo original</span><strong>Página 15 de 17</strong></div><img loading="lazy" src="paginas/pagina-15.jpg" alt="Página 15 del artículo académico"></article>
+<article class="page" id="pagina-16" data-page="16"><div class="page-head"><span>Artículo original</span><strong>Página 16 de 17</strong></div><img loading="lazy" src="paginas/pagina-16.jpg" alt="Página 16 del artículo académico"></article>
+<article class="page" id="pagina-17" data-page="17"><div class="page-head"><span>Artículo original</span><strong>Página 17 de 17</strong></div><img loading="lazy" src="paginas/pagina-17.jpg" alt="Página 17 del artículo académico"></article>
+</section></main><footer>Libro digital adaptable · Preparado para publicarse en GitHub Pages</footer>
+<script>
+const cards=[...document.querySelectorAll('.page')];let current=1;
+function go(n){current=Math.max(1,Math.min(cards.length,n));cards[current-1].scrollIntoView({behavior:'smooth',block:'start'});document.getElementById('contador').textContent=`Página ${current} de ${cards.length}`;}
+document.getElementById('prev').addEventListener('click',()=>go(current-1));
+document.getElementById('next').addEventListener('click',()=>go(current+1));
+document.getElementById('arriba').addEventListener('click',()=>window.scrollTo({top:0,behavior:'smooth'}));
+document.getElementById('buscar').addEventListener('input',e=>{const n=parseInt(e.target.value,10);if(Number.isInteger(n)&&n>=1&&n<=cards.length)go(n);});
+const obs=new IntersectionObserver(entries=>{entries.forEach(e=>{if(e.isIntersecting){current=Number(e.target.dataset.page);document.getElementById('contador').textContent=`Página ${current} de ${cards.length}`;}})},{threshold:.35});
+cards.forEach(c=>obs.observe(c));
+</script></body></html>
